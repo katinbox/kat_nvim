@@ -50,4 +50,9 @@ keymap.set('i', '<A-j>', '<ESC>:m .+1<CR>==gi')
 keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv")
 keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv")
 
-keymap.set('n', '<ESC>', ':noh<cr>')
+-- Escape highlight search
+keymap.set('n', '<ESC>', '<cmd>:noh<cr>', {noremap = true, silent = true})
+
+-- Close current buffer 
+keymap.set('n', '<Space>x', '<cmd>:bd<cr>')
+
